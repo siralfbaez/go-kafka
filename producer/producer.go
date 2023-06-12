@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/confluentinc/confluent-kafka-go/kafka"
+	"github.com/siralfbaez/go-kafka/util"
 	"math/rand"
 	"os"
 )
@@ -15,7 +16,7 @@ func main() {
 		os.Exit(1)
 	}
 	configFile := os.Args[1]
-	conf := ReadConfig(configFile)
+	conf := util.ReadConfig(configFile)
 
 	topic := "purchases"
 	p, err := kafka.NewProducer(&conf)

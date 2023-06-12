@@ -16,3 +16,14 @@ Producing Messages/Events
 
 The Architecture Configuration
 ![](helpers/img/GoKafka3.png)
+
+
+Run to produce events 
+```
+./out/producer getting-started.properties
+```
+
+Run to consume events
+```
+./out/consumer getting-started.properties 
+```

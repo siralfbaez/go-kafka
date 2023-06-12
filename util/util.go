@@ -1,4 +1,4 @@
-package main
+package util
 
 import (
 	"bufio"
@@ -18,6 +18,7 @@ func ReadConfig(configFile string) kafka.ConfigMap {
 		_, _ = fmt.Fprintf(os.Stderr, "Failed to open file: %s", err)
 		os.Exit(1)
 	}
+
 	// defer file.Close()
 
 	scanner := bufio.NewScanner(file)
